@@ -57,6 +57,7 @@
     <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
 
     {# GraphQL #}
+    <script type="text/javascript">
     // graphql query fetcher
     const graphQLFetcher = function(endpoint) {
         endpoint = endpoint || "{{ GRAPHIQL_DEFAULT_ENDPOINT }}";
@@ -110,7 +111,7 @@
     if (document.getElementsByClassName('graphiql').length > 0) {
         setupGraphiQL();
     }
-
+    </script>
     {# OPENSEARCH #}
     {%- if use_opensearch %}
     <link rel="search" type="application/opensearchdescription+xml"
